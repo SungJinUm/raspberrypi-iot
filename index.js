@@ -13,6 +13,7 @@ app.listen(4040, () => {
 
 let status = 1;
 app.post("/light-main", (req, res) => {
+  //GPIO 사용 서브모터 제어 코드
   status = status * -1;
   res.json({ nowStatus: status });
 });
